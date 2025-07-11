@@ -22,6 +22,8 @@
 `include "include.v"
 
 module neuron #(parameter layerNo=0,neuronNo=0,numWeight=784,dataWidth=16,sigmoidSize=5,weightIntWidth=1,actType="relu",biasFile="",weightFile="")(
+    //numWeight = 784 потому, что размер изображений в датасете MNIST = 28x28 = 784 [https://en.wikipedia.org/wiki/MNIST_database]
+    // если у меня изображения 256x256, то numWeight = 65536
     input           clk,
     input           rst,
     input [dataWidth-1:0]    myinput,
