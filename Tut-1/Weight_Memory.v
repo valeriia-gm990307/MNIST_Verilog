@@ -30,7 +30,7 @@ module Weight_Memory #(parameter numWeight = 3, neuronNo=5,layerNo=1,addressWidt
     input [dataWidth-1:0] win,
     output reg [dataWidth-1:0] wout);
     
-	reg [dataWidth-1:0] mem [numWeight-1:0]; //почему dataWidth = 16, если разрядность данных в weightFile, как правило, > 16 бит
+	reg [dataWidth-1:0] mem [numWeight-1:0]; //почему dataWidth = 16, если разрядность данных в weightFile, как правило, > 16 бит?
 
     `ifdef pretrained
         initial
