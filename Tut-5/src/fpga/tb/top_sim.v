@@ -31,7 +31,7 @@ module top_sim(
     reg clock;
     reg [`dataWidth-1:0] in;
     reg in_valid;
-    reg [`dataWidth-1:0] in_mem [784:0];
+    reg [`dataWidth-1:0] in_mem [784:0]; //для каждого пикселя свой вес?
     reg [7:0] fileName[23:0];
     reg s_axi_awvalid;
     reg [31:0] s_axi_awaddr;
