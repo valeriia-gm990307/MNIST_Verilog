@@ -169,7 +169,7 @@ module neuron #(parameter layerNo=0,neuronNo=0,numWeight=784,dataWidth=16,sigmoi
     Weight_Memory #(.numWeight(numWeight),.neuronNo(neuronNo),.layerNo(layerNo),.addressWidth(addressWidth),.dataWidth(dataWidth),.weightFile(weightFile)) WM(
         .clk(clk),
         .wen(wen),
-        .ren(ren),
+        .ren(ren), //одновременно с чтением пикселей изображения разрешаем чтение весов
         .wadd(w_addr),
         .radd(r_addr),
         .win(w_in),
