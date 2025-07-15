@@ -29,9 +29,9 @@ module neuron #(parameter layerNo=0,neuronNo=0,numWeight=784,dataWidth=16,sigmoi
     input [dataWidth-1:0]    myinput,//чем определяется dataWidth? предположим, пока что, размерностью пикселя
     input           myinputValid, //пока читаем из in_mem, in_valid (myinputValid) = 1 (см. Tut-5, top_sim.v)
     input           weightValid, //значение этого сигнала выставляется по AXI
-    input           biasValid, //пишется по AXI
+    input           biasValid, //пишется по AXI; если предобучена, то ненужен
     input [31:0]    weightValue, //тоже по AXI выставляется; если сеть предобучена, то этот сигнал ненужен? (см. регистр w_in)
-    input [31:0]    biasValue,
+    input [31:0]    biasValue, 
     input [31:0]    config_layer_num,
     input [31:0]    config_neuron_num,
     output[dataWidth-1:0]    out,
