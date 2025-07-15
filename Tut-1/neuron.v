@@ -30,7 +30,7 @@ module neuron #(parameter layerNo=0,neuronNo=0,numWeight=784,dataWidth=16,sigmoi
     input           myinputValid, //пока читаем из in_mem, in_valid (myinputValid) = 1 (см. Tut-5, top_sim.v)
     input           weightValid, //значение этого сигнала выставляется по AXI
     input           biasValid,
-    input [31:0]    weightValue, //тоже по AXI выставляется
+    input [31:0]    weightValue, //тоже по AXI выставляется; если сеть предобучена, то этот сигнал ненужен? (см. регистр w_in)
     input [31:0]    biasValue,
     input [31:0]    config_layer_num,
     input [31:0]    config_neuron_num,
