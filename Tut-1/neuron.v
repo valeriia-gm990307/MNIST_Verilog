@@ -32,7 +32,7 @@ module neuron #(parameter layerNo=0,neuronNo=0,numWeight=784,dataWidth=16,sigmoi
     input           biasValid, //пишется по AXI; если предобучена, то ненужен
     input [31:0]    weightValue, //тоже по AXI выставляется; если сеть предобучена, то этот сигнал ненужен? (см. регистр w_in)
     input [31:0]    biasValue, //для предобученной ненужен
-    input [31:0]    config_layer_num,
+    input [31:0]    config_layer_num, //для предобученной ненужен
     input [31:0]    config_neuron_num,
     output[dataWidth-1:0]    out,
     output reg      outvalid   
