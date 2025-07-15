@@ -26,7 +26,7 @@ module neuron #(parameter layerNo=0,neuronNo=0,numWeight=784,dataWidth=16,sigmoi
     // если у меня изображения 256x256, то numWeight = 65536
     input           clk,
     input           rst,
-    input [dataWidth-1:0]    myinput,//чем определяется dataWidth?
+    input [dataWidth-1:0]    myinput,//чем определяется dataWidth? предположим, пока что, размерностью пикселя
     input           myinputValid,
     input           weightValid,
     input           biasValid,
