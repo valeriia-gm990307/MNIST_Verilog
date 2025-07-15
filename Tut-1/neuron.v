@@ -27,7 +27,7 @@ module neuron #(parameter layerNo=0,neuronNo=0,numWeight=784,dataWidth=16,sigmoi
     input           clk,
     input           rst,
     input [dataWidth-1:0]    myinput,//чем определяется dataWidth? предположим, пока что, размерностью пикселя
-    input           myinputValid,
+    input           myinputValid, //пока читаем из in_mem, in_valid (myinputValid) = 1 (см. Tut-5, top_sim.v)
     input           weightValid,
     input           biasValid,
     input [31:0]    weightValue,
